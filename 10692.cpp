@@ -87,13 +87,14 @@ int Euler_phi(int num)
     if( num > 1 ) phi -= phi/num ;
     return phi;
 }
+// a ^ x % Mod  = a ^ ( x % phi(Mod) + Phi(Mod ) ) % Mod
 int Dfs(int pos , int Mod)
 {
 
     if ( pos == n-1 ) return val[n-1]%Mod ;
     int PhiMod = Euler_phi(Mod);
 
-    int Add = Dfs(pos+1,PhiMod);
+    int Add = Dfs(pos+1,PhiMod); // calculate x % phi(Mod)
     int ans = bigmod(val[pos] , PhiMod + Add , Mod );
 
     return ans ;
