@@ -77,6 +77,7 @@ void ini()
     {
         adj[x].clear();
         Rev[x].clear();
+        vis[x] = 0 ;
     }
     topo.clear();
 }
