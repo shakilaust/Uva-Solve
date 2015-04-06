@@ -7,7 +7,7 @@
  Type   ::
  verdict::
  */
- 
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -48,33 +48,30 @@
 #define memo(a,b) memset((a),(b),sizeof(a))
 #define G() getchar()
 #define MAX3(a,b,c) max(a,max(b,c))
- 
+
 double const EPS=3e-8;
 using namespace std;
- 
- 
+
+
 template< class T > T gcd(T a, T b) { return (b != 0 ? gcd<T>(b, a%b) : a); }
 template< class T > T lcm(T a, T b) { return (a / gcd<T>(a, b) * b); }
- 
+
 int main()
 {
        // freopen("input.txt","r",stdin);
-       int cs , t ;
-       cin >> t ;
-       for ( cs = 1 ; cs <= t ; cs++ )
-       {
+       
+       int cs = 1 ;
            double l , w;
            char str[10];
-           scanf("%lf%s%lf",&l,str,&w);
+           while(scanf("%lf%s%lf",&l,str,&w)==3) {
            double r = sqrt(l*l + w*w)/2.0;
           double angle =2 * atan(w/l);
           double arc = angle * r ;
           double ratio = arc + l ;
           ratio = 200 / ratio;
-          printf("Case %d: %lf %lf\n",cs,ratio*l,ratio*w);
- 
+          printf("Case %d: %lf %lf\n",cs++,ratio*l,ratio*w);
+
        }
        return 0;
- 
+
 }
- 
