@@ -157,7 +157,7 @@ int main()
 {
    // I will always use scanf and printf
    // May be i won't be a good programmer but i will be a good human being
-      cout << 8 * 8 * 64 * ( 1 << 8 ) << endl ;
+    
       int t = II ;
       for ( cs = 1 ;  cs <= t ; cs++ )
       {
